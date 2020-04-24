@@ -5,6 +5,7 @@
 </template>
 
 <script>
+// vim
 import SignupForm from '@/components/SignupForm.vue';
 
 export default {
