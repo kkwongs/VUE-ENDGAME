@@ -30,3 +30,6 @@ https://github.com/axios/axios#axioscreateconfig
 
 웹팩 DefinePlugin 문서
 https://webpack.js.org/plugins/define-plugin/
+
+Vue CLI env 파일 규칙 문서
+https://cli.vuejs.org/guide/mode-and-env.html#modes-and-environment-variables
