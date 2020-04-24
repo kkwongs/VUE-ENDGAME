@@ -39,3 +39,9 @@ https://joshua1988.github.io/web-development/vuejs/boost-productivity/
 
 ESLint 설정 - 깃헙 브랜치에 올라간 코드 확인하기(브라우저에 깃헙 계정 로그인 필요)
 https://github.com/joshua1988/vue-til/blob/complete/settings.json
+
+jsconfig.json 파일 링크(Vue TIL 리포지토리)
+https://github.com/joshua1988/vue-til/blob/complete/jsconfig.json
+
+VSCode의 jsconfig.json 파일 설명 글
+https://code.visualstudio.com/docs/languages/jsconfig
