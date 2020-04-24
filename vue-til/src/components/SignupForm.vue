@@ -23,11 +23,9 @@ import { registerUser } from '@/api/index';
 export default {
   data() {
     return {
-      // form values
       username: '',
       password: '',
       nickname: '',
-      // log
       logMessage: '',
     };
   },
@@ -44,7 +42,6 @@ export default {
       this.logMessage = `${data.nickname} 님 환영합니다.`;
       this.initFrom();
     },
-    // Form의 데이터 비우기
     initFrom() {
       this.username = '';
       this.password = '';
