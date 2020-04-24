@@ -36,7 +36,12 @@ export default {
   methods: {
     submitForm() {
       console.log('폼 제출');
-      registerUser();
+      const userData = {
+        username: this.username,
+        password: this.password,
+        nickname: this.nickname,
+      };
+      registerUser(userData);
     },
   },
 };
