@@ -1,7 +1,5 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import LoginPage from '@/views/LoginPage.vue';
-import SignupPage from '@/views/SignupPage.vue';
 
 // 플러그인을 초기화하기 위한 코드
 Vue.use(VueRouter);
@@ -11,11 +9,11 @@ export default new VueRouter({
   routes: [
     {
       path: '/login',
-      component: LoginPage,
+      component: () => import('@/views/LoginPage.vue'),
     },
     {
       path: '/signup',
-      component: SignupPage,
+      component: () => import('@/views/SignupPage.vue'),
     },
   ],
 });
