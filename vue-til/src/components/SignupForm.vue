@@ -16,7 +16,7 @@
       <input id="nickname" type="text" v-model="nickname" />
     </div>
     <!-- 이벤트 버블링 -->
-    <button type="submit">login</button>
+    <button type="submit">회원 가입</button>
   </form>
 </template>
 
@@ -34,14 +34,18 @@ export default {
     };
   },
   methods: {
-    submitForm() {
+    async submitForm() {
       console.log('폼 제출');
       const userData = {
         username: this.username,
         password: this.password,
         nickname: this.nickname,
       };
-      registerUser(userData);
+      const response = await registerUser(userData);
+      console.log(response);
+      // async await로 처리 가능
+      // .then()
+      // .catch();
     },
   },
 };
