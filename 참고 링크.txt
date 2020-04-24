@@ -1,0 +1,26 @@
+Swagger
+https://swagger.io/
+
+깃헙 리포지토리 링크
+https://github.com/joshua1988/vue-til
+
+프로그램 설치 안내 동영상 - Vue.js 시작하기
+https://www.inflearn.com/course/Age-of-Vuejs/lecture/21333
+
+개발환경 목록 페이지 링크
+https://github.com/joshua1988/vue-til/tree/master#%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD
+
+API 서버 깃헙 리포지토리 주소
+https://github.com/joshua1988/vue-til-server
+
+Node.js 이전 릴리즈 다운로드 페이지
+https://nodejs.org/ko/download/releases/
+
+NVM 깃헙 설치 링크
+https://github.com/nvm-sh/nvm#installing-and-updating
+
+NVM 설치 및 버전 변경 절차 문서
+https://github.com/joshua1988/vue-til-server#nvm-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EB%B2%84%EC%A0%84-%EB%B3%80%EA%B2%BD-%EB%B0%A9%EB%B2%95
+
+MongoDB Cloud 사이트
+https://cloud.mongodb.com/

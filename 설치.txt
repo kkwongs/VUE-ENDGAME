@@ -1,0 +1,12 @@
+1. git clone https://github.com/joshua1988/vue-til-server.git
+(NVM ??)
+2. node -v (v10.16.3)
+3. npm i
+4. npm run dev
+
+NVM ??
+1. curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+2. vi ~/.bashrc
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+3. nvm install 10.16.3
