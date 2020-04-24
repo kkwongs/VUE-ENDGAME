@@ -1,7 +1,19 @@
 <template>
-  <div>
-    signup
-  </div>
+  <form action="">
+    <div>
+      <label for="username">ID: </label>
+      <input id="username" type="text" />
+    </div>
+    <div>
+      <label for="password">PW: </label>
+      <input id="password" type="text" />
+    </div>
+    <div>
+      <label for="nickname">Nickname: </label>
+      <input id="nickname" type="text" />
+    </div>
+    <button type="submit">login</button>
+  </form>
 </template>
 
 <script>
