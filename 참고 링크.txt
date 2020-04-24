@@ -45,3 +45,9 @@ https://github.com/joshua1988/vue-til/blob/complete/jsconfig.json
 
 VSCode의 jsconfig.json 파일 설명 글
 https://code.visualstudio.com/docs/languages/jsconfig
+
+Vue.js 스타일 가이드 문서
+https://kr.vuejs.org/v2/style-guide/index.html
+
+수업 깃헙 리포지토리 안내
+https://github.com/joshua1988/vue-til

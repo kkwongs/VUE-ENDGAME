@@ -2,7 +2,6 @@
 	<div id="app">
 		<img alt="Vue logo" src="./assets/logo.png" />
 		<HelloWorld msg="Welcome to Your Vue.js App" />
-		<app-header></app-header>
 	</div>
 </template>
 
@@ -10,10 +9,10 @@
 import HelloWorld from './components/HelloWorld.vue';
 import AppHeader from './components/common/AppHeader.vue';
 
-// var a = 'hi';
+var a = 'hi';
 
 export default {
-	name: 'App',
+	name: 'app',
 	components: {
 		HelloWorld,
 		AppHeader,
@@ -26,7 +25,7 @@ export default {
 
 <style>
 #app {
-	font-family: Avenir, Helvetica, Arial, sans-serif;
+	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
