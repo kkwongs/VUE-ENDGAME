@@ -12,3 +12,6 @@ https://github.com/vuejs/vue-router
 
 뷰 라우터 History Mode 주의 사항 문서
 https://router.vuejs.org/guide/essentials/history-mode.html
+
+타입스크립트 핸드북
+https://joshua1988.github.io/ts/

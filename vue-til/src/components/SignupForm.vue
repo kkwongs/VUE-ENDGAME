@@ -21,6 +21,8 @@
 </template>
 
 <script>
+import { registerUser } from '@/api/index';
+
 export default {
   // vda
   data() {
@@ -34,6 +36,7 @@ export default {
   methods: {
     submitForm() {
       console.log('폼 제출');
+      registerUser();
     },
   },
 };
