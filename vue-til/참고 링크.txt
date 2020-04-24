@@ -24,3 +24,6 @@ https://joshua1988.github.io/es6-online-book/template-literal.html
 
 ES6 Destructuring 정리글
 https://joshua1988.github.io/es6-online-book/destructuring.html
+
+axios create() 문서
+https://github.com/axios/axios#axioscreateconfig
