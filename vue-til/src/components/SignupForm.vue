@@ -1,7 +1,4 @@
 <template>
-  <!-- <form v-on:submit> -->
-  <!-- <form @submit="submitForm"> -->
-  <!-- 제출, 새로고침 방지 -->
   <form @submit.prevent="submitForm">
     <div>
       <label for="username">ID: </label>
@@ -15,8 +12,8 @@
       <label for="nickname">Nickname: </label>
       <input id="nickname" type="text" v-model="nickname" />
     </div>
-    <!-- 이벤트 버블링 -->
     <button type="submit">회원 가입</button>
+    <p>{{ logMessage }}</p>
   </form>
 </template>
 
@@ -24,13 +21,14 @@
 import { registerUser } from '@/api/index';
 
 export default {
-  // vda
   data() {
     return {
-      // input box와 연결
+      // form values
       username: '',
       password: '',
       nickname: '',
+      // log
+      logMessage: '',
     };
   },
   methods: {
@@ -41,11 +39,16 @@ export default {
         password: this.password,
         nickname: this.nickname,
       };
-      const response = await registerUser(userData);
-      console.log(response);
-      // async await로 처리 가능
-      // .then()
-      // .catch();
+      const { data } = await registerUser(userData);
+      console.log(data.nickname);
+      this.logMessage = `${data.nickname} 님 환영합니다.`;
+      this.initFrom();
+    },
+    // Form의 데이터 비우기
+    initFrom() {
+      this.username = '';
+      this.password = '';
+      this.nickname = '';
     },
   },
 };
