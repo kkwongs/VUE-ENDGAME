@@ -9,3 +9,6 @@ https://vuejs.org/v2/guide/components-dynamic-async.html#ad
 
 뷰 라우터 오픈 소스
 https://github.com/vuejs/vue-router
+
+뷰 라우터 History Mode 주의 사항 문서
+https://router.vuejs.org/guide/essentials/history-mode.html

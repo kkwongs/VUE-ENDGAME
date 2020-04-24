@@ -6,6 +6,8 @@ Vue.use(VueRouter);
 
 // 인스턴스 생성후 파일에서 밖으로 내보냄
 export default new VueRouter({
+  // History Mode 주의 사항 문서 참고
+  mode: 'history',
   routes: [
     {
       path: '/',
