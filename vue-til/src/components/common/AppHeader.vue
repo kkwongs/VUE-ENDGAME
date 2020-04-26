@@ -8,6 +8,8 @@
     <div class="navigations">
       <template v-if="isUserLogin">
         <span class="username">{{ $store.state.username }}</span>
+        <!-- javascript:; 앵커(a)태그의 동작을 막음 -->
+        <a href="javascript:;" @click="logoutUser">Logout</a>
       </template>
       <template v-else>
         <router-link to="/login">로그인</router-link> |
@@ -22,6 +24,12 @@ export default {
   computed: {
     isUserLogin() {
       return this.$store.getters.isLogin;
+    },
+  },
+  methods: {
+    logoutUser() {
+      this.$store.commit('clearUsername');
+      this.$router.push('/login');
     },
   },
 };
