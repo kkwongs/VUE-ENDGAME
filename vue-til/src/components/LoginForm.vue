@@ -26,14 +26,24 @@ export default {
   },
   methods: {
     async submitForm() {
-      const userData = {
-        username: this.username,
-        password: this.password,
-      };
-      const { data } = await loginUser(userData);
-      console.log(data.user.nickname);
-      this.logMessage = `${data.user.nickname} 님 로그인 되었습니다.`;
-      this.initForm();
+      try {
+        // 비즈니스 로직
+        const userData = {
+          username: this.username,
+          password: this.password,
+        };
+        const { data } = await loginUser(userData);
+        console.log(data.user.nickname);
+        this.logMessage = `${data.user.nickname} 님 로그인 되었습니다.`;
+        // this.initForm();
+      } catch (error) {
+        // 에러 핸들링할 코드
+        // console.log(error.response.data);
+        this.logMessage = error.response.data;
+        // this.initForm();
+      } finally {
+        this.initForm();
+      }
     },
     initForm() {
       this.username = '';
