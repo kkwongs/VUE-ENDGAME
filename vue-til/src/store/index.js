@@ -8,6 +8,12 @@ export default new Vuex.Store({
   state: {
     username: '',
   },
+  // state의 값이 변경됐을 떄 특정 상태 계산
+  getters: {
+    isLogin(state) {
+      return state.username !== '';
+    },
+  },
   // 데이터를 바꿈
   mutations: {
     setUsername(state, username) {
