@@ -8,7 +8,9 @@
       <label for="passowrd">PW: </label>
       <input id="password" type="text" v-model="password" />
     </div>
-    <button type="submit">로그인</button>
+    <button v-bind:disabled="!isUsernameValid || !password" type="submit">
+      로그인
+    </button>
     <p>{{ logMessage }}</p>
   </form>
 </template>
@@ -24,6 +26,11 @@ export default {
       password: '',
       logMessage: '',
     };
+  },
+  computed: {
+    isUsernameValid() {
+      return validateEmail(this.username);
+    },
   },
   methods: {
     async submitForm() {
