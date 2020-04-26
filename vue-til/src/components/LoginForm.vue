@@ -55,7 +55,8 @@ export default {
         };
         const { data } = await loginUser(userData);
         console.log(data.user.nickname);
-        this.logMessage = `${data.user.nickname} 님 로그인 되었습니다.`;
+        this.$router.push('/main');
+        // this.logMessage = `${data.user.nickname} 님 로그인 되었습니다.`;
         // this.initForm();
       } catch (error) {
         // 에러 핸들링할 코드

@@ -36,3 +36,6 @@ https://cli.vuejs.org/guide/mode-and-env.html#modes-and-environment-variables
 
 Email Validation 정규 표현식 코드
 https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
+
+뷰 라우터 Programmatic Navigation 문서
+https://router.vuejs.org/guide/essentials/navigation.html#programmatic-navigation
