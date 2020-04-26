@@ -1,25 +1,30 @@
 <template>
-  <form @submit.prevent="submitForm">
-    <div>
-      <label for="username">ID: </label>
-      <input id="username" type="text" v-model="username" />
+  <div class="contents">
+    <div class="form-wrapper form-wrapper-sm">
+      <form @submit.prevent="submitForm" class="form">
+        <div>
+          <label for="username">ID: </label>
+          <input id="username" type="text" v-model="username" />
+        </div>
+        <div>
+          <label for="password">PW: </label>
+          <input id="password" type="text" v-model="password" />
+        </div>
+        <div>
+          <label for="nickname">Nickname: </label>
+          <input id="nickname" type="text" v-model="nickname" />
+        </div>
+        <button
+          v-bind:disabled="!isUsernameValid || !password || !nickname"
+          type="submit"
+          class="btn"
+        >
+          회원 가입
+        </button>
+        <p class="log">{{ logMessage }}</p>
+      </form>
     </div>
-    <div>
-      <label for="password">PW: </label>
-      <input id="password" type="text" v-model="password" />
-    </div>
-    <div>
-      <label for="nickname">Nickname: </label>
-      <input id="nickname" type="text" v-model="nickname" />
-    </div>
-    <button
-      v-bind:disabled="!isUsernameValid || !password || !nickname"
-      type="submit"
-    >
-      회원 가입
-    </button>
-    <p>{{ logMessage }}</p>
-  </form>
+  </div>
 </template>
 
 <script>
