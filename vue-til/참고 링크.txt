@@ -33,3 +33,6 @@ https://webpack.js.org/plugins/define-plugin/
 
 Vue CLI env 파일 규칙 문서
 https://cli.vuejs.org/guide/mode-and-env.html#modes-and-environment-variables
+
+Email Validation 정규 표현식 코드
+https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
