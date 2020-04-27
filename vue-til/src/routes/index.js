@@ -1,12 +1,10 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import store from '@/store/index';
 
-// 플러그인을 초기화하기 위한 코드
 Vue.use(VueRouter);
 
-// 인스턴스 생성후 파일에서 밖으로 내보냄
-export default new VueRouter({
-  // History Mode 주의 사항 문서 참고
+const router = new VueRouter({
   mode: 'history',
   routes: [
     {
@@ -24,14 +22,17 @@ export default new VueRouter({
     {
       path: '/main',
       component: () => import('@/views/MainPage.vue'),
+      meta: { auth: true },
     },
     {
       path: '/add',
       component: () => import('@/views/PostAddPage.vue'),
+      meta: { auth: true },
     },
     {
       path: '/post/:id',
       component: () => import('@/views/PostEditPage.vue'),
+      meta: { auth: true },
     },
     {
       path: '*',
@@ -39,3 +40,14 @@ export default new VueRouter({
     },
   ],
 });
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.auth && !store.getters.isLogin) {
+    console.log('로그인 하세요!!!');
+    next('/login');
+    return;
+  }
+  next();
+});
+
+export default router;
