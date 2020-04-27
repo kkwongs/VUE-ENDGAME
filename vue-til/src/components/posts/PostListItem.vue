@@ -29,7 +29,8 @@ export default {
       // console.log('deleted');
     },
     routeEditPage() {
-      this.$router.push('/post/5ea6db6a1f5be73adasd5c4cd6179');
+      const id = this.postItem._id;
+      this.$router.push(`/post/${id}`);
     },
   },
 };
