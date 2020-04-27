@@ -5,6 +5,11 @@
         <div>
           <label for="username">ID: </label>
           <input id="username" type="text" v-model="username" />
+          <p class="validation-text">
+            <span class="warning" v-if="!isUsernameValid && username">
+              Please enter an email address
+            </span>
+          </p>
         </div>
         <div>
           <label for="password">PW: </label>
@@ -18,6 +23,9 @@
           v-bind:disabled="!isUsernameValid || !password || !nickname"
           type="submit"
           class="btn"
+          :class="
+            !isUsernameValid || !password || !nickname ? 'disabled' : null
+          "
         >
           회원 가입
         </button>
@@ -67,4 +75,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.btn {
+  color: white;
+}
+</style>
