@@ -63,3 +63,12 @@ https://router.vuejs.org/guide/advanced/navigation-guards.html
 
 라우터 네비게이션 가드 관련 영상(완벽 가이드 수강 권한 필요)
 https://www.inflearn.com/course/vue-js/lecture/17055
+
+State of JS 2019 - 테스팅
+https://2019.stateofjs.com/testing/
+
+Jest 공식 사이트
+https://jestjs.io/en/
+
+Jest describe() API 문서
+https://jestjs.io/docs/en/api#describename-fn
