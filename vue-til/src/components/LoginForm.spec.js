@@ -5,7 +5,6 @@ import { sum } from '@/components/math';
 describe('math.js', () => {
   test('10 + 20 = 30', () => {
     const result = sum(10, 20);
-    result === 30;
-    expect(result).toBe(30);
+    expect(result).not.toBe(30);
   });
 });
