@@ -51,3 +51,6 @@ https://github.com/axios/axios#interceptors
 
 아이오닉 아이콘 사이트
 https://ionicons.com/usage
+
+Toast Popup 코드는 이 소스를 참고하세요 :)
+https://github.com/joshua1988/vue-til/blob/complete/src/components/common/ToastPopup.vue
