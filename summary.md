@@ -1,0 +1,16 @@
+## 수업 정리
+
+- 프로젝트 구성 방법
+  - ESLint + Prettier
+  - env
+- REST API를 이용한 CRUD 애플리케이션 구현 방법
+- 백엔드 API 문서 보는 방법 및 백엔드 개발자와 협업할 때 주의할 점
+- axios 인터셉터와 모듈화를 이용한 API 함수 설계
+- 라우터 페이지 권한 처리
+- 프런트엔드 테스팅 방법
+
+## 향후 학습 로드맵
+
+- Vue.js 테스팅 심화 (2020년 상반기 예정)
+- Vue.js with Typescript (2020년 상반기 예정)
+- Vue Composition API (2020년 하반기 예정)
