@@ -19,6 +19,7 @@
           v-bind:disabled="!isUsernameValid || !password"
           type="submit"
           class="btn"
+          :class="!isUsernameValid || !password ? 'disabled' : null"
         >
           로그인
         </button>
@@ -69,4 +70,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.btn {
+  color: white;
+}
+</style>

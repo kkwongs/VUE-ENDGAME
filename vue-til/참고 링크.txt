@@ -75,3 +75,6 @@ https://jestjs.io/docs/en/api#describename-fn
 
 Vue Test Utils 공식 문서
 https://vue-test-utils.vuejs.org/guides/
+
+find() API 문서
+https://vue-test-utils.vuejs.org/api/wrapper/#find
