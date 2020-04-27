@@ -3,7 +3,7 @@
     <div class="post-title">{{ postItem.title }}</div>
     <div class="post-contents">{{ postItem.contents }}</div>
     <div class="post-time">
-      {{ postItem.createdAt }}
+      {{ postItem.createdAt | formatData }}
       <i class="icon ion-md-create" @click="routeEditPage"></i>
       <i class="icon ion-md-trash" @click="deleteItem"></i>
     </div>
@@ -18,6 +18,11 @@ export default {
     postItem: {
       type: Object,
       required: true,
+    },
+  },
+  filters: {
+    formatData(value) {
+      return new Date(value);
     },
   },
   methods: {

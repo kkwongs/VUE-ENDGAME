@@ -54,3 +54,6 @@ https://ionicons.com/usage
 
 Toast Popup 코드는 이 소스를 참고하세요 :)
 https://github.com/joshua1988/vue-til/blob/complete/src/components/common/ToastPopup.vue
+
+뷰 필터 안내 문서
+https://vuejs.org/v2/guide/filters.html#ad
