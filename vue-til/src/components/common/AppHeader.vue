@@ -3,12 +3,11 @@
     <div>
       <router-link to="/" class="logo">
         TIL
+        <span v-if="isUserLogin">by {{ $store.state.username }}</span>
       </router-link>
     </div>
     <div class="navigations">
       <template v-if="isUserLogin">
-        <span class="username">{{ $store.state.username }}</span>
-        <!-- javascript:; 앵커(a)태그의 동작을 막음 -->
         <a href="javascript:;" @click="logoutUser">Logout</a>
       </template>
       <template v-else>
@@ -72,5 +71,8 @@ a.logo {
 a.router-link-exact-active {
   color: white;
   font-weight: bold;
+}
+.logout-button {
+  font-size: 14px;
 }
 </style>

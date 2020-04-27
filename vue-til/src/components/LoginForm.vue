@@ -54,16 +54,12 @@ export default {
           password: this.password,
         };
         const { data } = await loginUser(userData);
-        console.log(data.user.nickname);
+        console.log(data.token);
         this.$store.commit('setUsername', data.user.nickname);
         this.$router.push('/main');
-        // this.logMessage = `${data.user.nickname} 님 로그인 되었습니다.`;
-        // this.initForm();
       } catch (error) {
         // 에러 핸들링할 코드
-        // console.log(error.response.data);
         this.logMessage = error.response.data;
-        // this.initForm();
       } finally {
         this.initForm();
       }
