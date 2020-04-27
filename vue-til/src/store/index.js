@@ -1,13 +1,14 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import { getAuthFromCookie, getUserFromCookie } from '@/utils/cookies';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   // 여러 컴포넌트 간의 공유되는 데이터
   state: {
-    username: '',
-    token: '',
+    username: getUserFromCookie() || '',
+    token: getAuthFromCookie() || '',
   },
   // state의 값이 변경됐을 떄 특정 상태 계산
   getters: {
