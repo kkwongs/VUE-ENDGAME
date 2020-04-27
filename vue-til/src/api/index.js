@@ -1,14 +1,22 @@
 import axios from 'axios';
 import { setInterceptors } from '@/api/common/interceptors';
 
-// 액시오스 초기화 함수
 function createInstance() {
-  const instance = axios.create({
+  return axios.create({
     baseURL: process.env.VUE_APP_API_URL,
+  });
+}
+
+// 액시오스 초기화 함수
+function createInstanceWithAuth() {
+  const instance = axios.create({
+    baseURL: `${process.env.VUE_APP_API_URL}${url}`,
   });
   return setInterceptors(instance);
 }
+
 const instance = createInstance();
+const posts = createInstanceWithAuth('posts');
 
 // 회원가입 API
 function registerUser(userData) {
@@ -29,5 +37,10 @@ function fetchPosts() {
 function createPost(postData) {
   return instance.post('posts', postData);
 }
+
+// GET - posts
+// POST - post
+// PUT - posts {id}
+// DELETE - posts {id}
 
 export { registerUser, loginUser, fetchPosts, createPost };
