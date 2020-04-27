@@ -2,17 +2,15 @@
   <div>
     <div class="main list-container contents">
       <h1 class="page-header">Today I Learned</h1>
-      <ul>
+      <div v-if="isLoading">
+        Loading...
+      </div>
+      <ul v-else>
         <PostListItem
           v-for="postItem in postItems"
           :key="postItem._id"
           :postItem="postItem"
         ></PostListItem>
-        <!-- <li v-for="postItem in postItems" :key="postItem._id">
-          <div class="post-title">{{ postItem.title }}</div>
-          <div class="post-contents">{{ postItem.contents }}</div>
-          <div class="post-time">{{ postItem.createdAt }}</div>
-        </li> -->
       </ul>
     </div>
   </div>
@@ -29,11 +27,14 @@ export default {
   data() {
     return {
       postItems: [],
+      isLoading: false,
     };
   },
   methods: {
     async fetchData() {
+      this.isLoading = true;
       const { data } = await fetchPosts();
+      this.isLoading = false;
       this.postItems = data.posts;
     },
   },
